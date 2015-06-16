@@ -52,3 +52,6 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+if filereadable("/home/yuan/.vim/local/my.vim")
+  source /home/yuan/.vim/local/my.vim
+endif
