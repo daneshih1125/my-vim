@@ -15,3 +15,10 @@ function TabExpand(space)
   set softtabstop?
   set tabstop?
 endfunction
+
+set nu
+" auto comment
+set formatoptions=cro
+set comments=sl:/*,mb:\ *,elx:\ */
+" line
+set cursorline
