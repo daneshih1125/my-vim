@@ -30,6 +30,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Command-T'
 Plugin 'vim-scripts/AnsiEsc.vim'
+Plugin 'vim-scripts/python.vim'
 Plugin 'cscope_macros.vim'
 Plugin 'taglist.vim'
 
