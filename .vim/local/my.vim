@@ -89,3 +89,16 @@ set formatoptions=cro
 set comments=sl:/*,mb:\ *,elx:\ */
 " line
 set cursorline
+
+" my mapping key that search result of cscope search will display in currrent
+" window
+if has("cscope")
+  nmap cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+  nmap cg :cs find g <C-R>=expand("<cword>")<CR><CR>
+  nmap cc :cs find c <C-R>=expand("<cword>")<CR><CR>
+  nmap ct :cs find t <C-R>=expand("<cword>")<CR><CR>
+  nmap ce :cs find e <C-R>=expand("<cword>")<CR><CR>
+  nmap cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+  nmap ci :cs find i <C-R>=expand("<cfile>")<CR><CR>
+  nmap cd :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
