@@ -34,8 +34,7 @@ Plugin 'vim-scripts/python.vim'
 Plugin 'cscope_macros.vim'
 Plugin 'taglist.vim'
 Plugin 'ivanov/vim-ipython'
-
-
+Plugin 'kergoth/vim-bitbake'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,6 +103,7 @@ if has("cscope")
   nmap cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
 
+" Tag list shortcut
 map <f9> :Tlist<CR>
 map th :TlistHighlightTag<CR>
 
