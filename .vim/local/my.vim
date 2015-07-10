@@ -103,3 +103,6 @@ if has("cscope")
   nmap ci :cs find i <C-R>=expand("<cfile>")<CR><CR>
   nmap cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
+map <f9> :Tlist<CR>
+map th :TlistHighlightTag<CR>
