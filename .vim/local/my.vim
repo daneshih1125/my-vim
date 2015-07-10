@@ -106,3 +106,7 @@ endif
 
 map <f9> :Tlist<CR>
 map th :TlistHighlightTag<CR>
+
+if filereadable($HOME . "/.vim/local/tab.vim")
+  exec "source " . $HOME . "/.vim/local/tab.vim"
+endif
