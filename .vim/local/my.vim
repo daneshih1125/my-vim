@@ -33,7 +33,6 @@ Plugin 'vim-scripts/AnsiEsc.vim'
 Plugin 'vim-scripts/python.vim'
 Plugin 'cscope_macros.vim'
 Plugin 'taglist.vim'
-Plugin 'ivanov/vim-ipython'
 Plugin 'kergoth/vim-bitbake'
 Plugin 'Valloric/YouCompleteMe'
 
