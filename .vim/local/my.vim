@@ -35,6 +35,7 @@ Plugin 'cscope_macros.vim'
 Plugin 'taglist.vim'
 Plugin 'ivanov/vim-ipython'
 Plugin 'kergoth/vim-bitbake'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
