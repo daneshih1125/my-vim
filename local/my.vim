@@ -110,3 +110,8 @@ map th :TlistHighlightTag<CR>
 if filereadable($HOME . "/.vim/local/tab.vim")
   exec "source " . $HOME . "/.vim/local/tab.vim"
 endif
+
+" cscope include all library headers
+if filereadable("/usr/include/include.cs")
+  cs add /usr/include/include.cs
+endif
