@@ -101,17 +101,20 @@ if has("cscope")
   nmap cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
   nmap ci :cs find i <C-R>=expand("<cfile>")<CR><CR>
   nmap cd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+  " cscope include all library headers
+  if filereadable("/usr/include/include.cs")
+    cs add /usr/include/include.cs
+  endif
 endif
 
 " Tag list shortcut
 map <f9> :Tlist<CR>
 map th :TlistHighlightTag<CR>
+" ctags shortcut
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 if filereadable($HOME . "/.vim/local/tab.vim")
   exec "source " . $HOME . "/.vim/local/tab.vim"
-endif
-
-" cscope include all library headers
-if filereadable("/usr/include/include.cs")
-  cs add /usr/include/include.cs
 endif
