@@ -90,6 +90,10 @@ set comments=sl:/*,mb:\ *,elx:\ */
 " line
 set cursorline
 
+"
+set pastetoggle=<F2>
+set hlsearch
+
 " my mapping key that search result of cscope search will display in currrent
 " window
 if has("cscope")
@@ -102,10 +106,11 @@ if has("cscope")
   nmap ci :cs find i <C-R>=expand("<cfile>")<CR><CR>
   nmap cd :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-  " cscope include all library headers
-  if filereadable("/usr/include/include.cs")
-    cs add /usr/include/include.cs
-  endif
+" cscope include all library headers
+if filereadable("/usr/include/include.cs")
+  cs add /usr/include/include.cs
+endif
+
 endif
 
 " Tag list shortcut
@@ -118,3 +123,7 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 if filereadable($HOME . "/.vim/local/tab.vim")
   exec "source " . $HOME . "/.vim/local/tab.vim"
 endif
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+map <F12> : match ExtraWhitespace /\s\+$/<CR>
+map <C-F12> : %s/\s\+$//<CR>
