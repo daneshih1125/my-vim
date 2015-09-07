@@ -114,6 +114,7 @@ endif
 endif
 
 " Tag list shortcut
+let Tlist_WinWidth = 40
 map <f9> :Tlist<CR>
 map th :TlistHighlightTag<CR>
 " ctags shortcut
