@@ -88,9 +88,16 @@ command -nargs=1 TabExpand call TabExpand(<f-args>)
 " open the diff in horizontal window.
 function GitDiffBranch(branch)
   let tmp_diff_file = "/tmp/" . substitute(bufname("%"), "/", "-", "g") . "-" .a:branch . ".diff"
-  let diff_cmd = "git diff " . a:branch . " " . bufname("%") . " >". tmp_diff_file
+  let diff_cmd = "git diff " . a:branch . " " . bufname("%")
   let cmd_out = system(diff_cmd)
-  exec "sp ". tmp_diff_file
+  let cmd_res = v:shell_error
+  if cmd_res == "0"
+    let diff_cmd = "git diff " . a:branch . " " . bufname("%") . " >". tmp_diff_file
+    let cmd_out = system(diff_cmd)
+    exec "sp ". tmp_diff_file
+  else
+    echo "No such branch or file"
+  endif
 endfunction
 
 command -nargs=1 GitDiffBranch call GitDiffBranch(<f-args>)
