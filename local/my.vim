@@ -35,6 +35,10 @@ Plugin 'cscope_macros.vim'
 Plugin 'taglist.vim'
 Plugin 'kergoth/vim-bitbake'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'IN3D/vim-raml'
+Plugin 'Yggdroot/indentLine'
+Plugin 'elzr/vim-json'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -147,3 +151,5 @@ endif
 highlight ExtraWhitespace ctermbg=red guibg=red
 map <F12> : match ExtraWhitespace /\s\+$/<CR>
 map <C-F12> : %s/\s\+$//<CR>
+
+let g:vim_json_syntax_conceal = 0
