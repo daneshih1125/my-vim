@@ -38,6 +38,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'IN3D/vim-raml'
 Plugin 'Yggdroot/indentLine'
 Plugin 'elzr/vim-json'
+Plugin 'moll/vim-node'
+Plugin 'kchmck/vim-coffee-script'
 
 
 " All of your Plugins must be added before the following line
@@ -86,7 +88,16 @@ function TabExpand(space)
   set tabstop?
 endfunction
 
+function TabExpandNot()
+  set shiftwidth=8
+  set softtabstop=8
+  set tabstop=8
+  set expandtab!
+  set autoindent!
+endfunction
+
 command -nargs=1 TabExpand call TabExpand(<f-args>)
+command TabExpandNot call TabExpandNot()
 
 " git diff current file with another branch.
 " open the diff in horizontal window.
