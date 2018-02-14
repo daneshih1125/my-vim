@@ -40,6 +40,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'elzr/vim-json'
 Plugin 'moll/vim-node'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'fatih/vim-go'
 
 
 " All of your Plugins must be added before the following line
@@ -164,3 +165,4 @@ map <F12> : match ExtraWhitespace /\s\+$/<CR>
 map <C-F12> : %s/\s\+$//<CR>
 
 let g:vim_json_syntax_conceal = 0
+let g:go_def_mapping_enabled = 0
