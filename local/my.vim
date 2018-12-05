@@ -166,3 +166,7 @@ map <C-F12> : %s/\s\+$//<CR>
 
 let g:vim_json_syntax_conceal = 0
 let g:go_def_mapping_enabled = 0
+
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
