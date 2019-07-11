@@ -40,6 +40,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'elzr/vim-json'
 Plugin 'moll/vim-node'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 
 
@@ -164,8 +165,10 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 map <F12> : match ExtraWhitespace /\s\+$/<CR>
 map <C-F12> : %s/\s\+$//<CR>
 
+set encoding=utf-8
 let g:vim_json_syntax_conceal = 0
 let g:go_def_mapping_enabled = 0
+let g:jedi#completions_command = "<C-N>"
 
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
